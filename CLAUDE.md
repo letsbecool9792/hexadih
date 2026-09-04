@@ -364,3 +364,7 @@ Run the air-gap beat with the extension's WebGPU path idle, or accept it being s
   providers charge for GPU time. That is the whole reason the provider list exists.
 - Free tiers generally train on your prompts. For us that is a **talking point, not a
   hole**: even if NVIDIA trains on every request, there is nothing identifying in them.
+
+
+  pull rq?
+  
