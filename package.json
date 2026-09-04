@@ -10,7 +10,10 @@
     "dev:dashboard": "pnpm --filter @hexadih/dashboard dev",
     "dev:web": "pnpm --filter @hexadih/web dev",
     "build": "turbo run build",
-    "typecheck": "turbo run compile"
+    "typecheck": "turbo run compile",
+    "test": "turbo run test",
+    "check": "node scripts/check-invariants.mjs",
+    "verify": "pnpm check && pnpm typecheck && pnpm test"
   },
   "license": "ISC",
   "devEngines": {
