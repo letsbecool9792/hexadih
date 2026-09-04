@@ -1,4 +1,5 @@
 import { log } from "@hexadih/shared";
+import { extractScreenElements } from "../lib/dom/extract";
 
 /**
  * RUNS IN THE PAGE. Two jobs: build the element graph from the DOM, and execute
@@ -21,7 +22,11 @@ export default defineContentScript({
   matches: ["<all_urls>"],
   runAt: "document_idle",
 
-  main() {
-    log.debug("content.injected");
-  },
+ main() {
+  const elements = extractScreenElements();
+
+  log.debug("content.screen_graph", {
+    elementCount: elements.length,
+  });
+},
 });
